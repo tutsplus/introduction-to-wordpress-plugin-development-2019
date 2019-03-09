@@ -1,0 +1,996 @@
+/*
+Theme Name: Coding Advanced Theme Templates
+Theme URI: https://github.com/rachelmccollin/tutsplus-advanced-theme-templates
+Description: Theme to accompany a tutplus course on Coding Advanced Theme Templates.
+Author: Rachel McCollin
+Author URI: https://rachelmccollin.com/
+Version: 1.0
+Text Domain: tutsplus
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/*Contents
+1. Layout
+2. Global elements including fonts and links
+3. Colours
+4. Header elements
+5. In-content navigation
+6. Mobile
+*/
+
+/*
+1. Layout
+----------------------------------------------------------------------------------
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+
+/* hide mobile */
+.mobile {
+	display: none;
+}
+
+/* title & site description */
+.site-name {
+	padding: 1em 0;
+}
+h1#site-title,
+h2#site-description {
+	display: inline;
+}
+
+/* nav menu */
+.menu.main {
+	text-align: center;
+	padding-bottom: 0;
+}
+.menu.main li {
+	display: inline;
+	float: none;
+}
+.main.menu li:after { 
+	content: " \002d"; 
+}
+.main.menu li:last-child:after { 
+	content: none; 
+}
+.menu.main li a {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+/* full width page sidebar */
+.sidebar-bg {
+	background-color: #000;
+	overflow: auto;
+	clear: both;
+}
+/* layout - header and full width sidebar */
+body {
+	width: 100%;
+	margin: 20px 0;
+	padding-bottom: 10px;
+}
+
+header, 
+.main, 
+.colophon, 
+nav.main, 
+.fatfooter, 
+aside.after-header, 
+aside.after-nav, 
+aside.after-footer,
+.sidebar-full,
+.wide-box article,
+.after-wide-box,
+.banner-image {
+	margin: 0 auto;
+	width: 96%;
+	max-width: 1200px;
+	clear: both;
+	padding-bottom: 1em;
+}
+
+footer {
+	padding: 10px 0;
+}
+.fatfooter {
+	overflow: auto;
+}
+
+/* floats */
+.quarter,
+.one-third,
+.two-thirds,
+.half {
+	float: left;
+}
+/* widths and margins for different proportions */
+.one-third {
+	width: 32%;
+}
+.two-thirds {
+	width: 65.5%;
+}
+.quarter {
+	width: 23.5%;
+}
+.three-quarters {
+	width: 74.5%;
+}
+.half {
+	width: 48%;
+}
+
+/* margins - 1% generally except for the .half width. Remember that these will be cumulative
+- so four items side by side will have 6% added in margins, 
+assuming the left and right ones are given .left and .right classes */
+.one-third {
+	margin: 0 0.5%;
+}
+.quarter,
+.two-thirds {
+	margin: 0 0.5%;
+}
+.left,
+.quarter.left,
+.one-third.left {
+	margin: 0 1% 0 0;
+	float: left;
+}
+.right,
+.quarter.right,
+.one-third.right {
+	margin: 0 0 0 1%;
+	float: right;
+}
+.half.left {
+	width: 48%;
+	margin: 0 2% 0 0;
+}
+.half.right {
+	width: 48%;
+	margin: 0 0 0 2%;
+}
+.two-thirds.left {
+	margin: 0 1% 0 0;
+}
+.two-thirds.right {
+	margin: 0 0 0 1%;
+	float: right;
+}
+
+/* adjust margins around floated images in line with larger screen size */
+#content .alignleft,
+#content img.alignleft {
+	margin-right: 3%;
+}
+#content .alignright,
+#content img.alignright {
+	margin-left: 3%;
+}
+
+/* styles to ensure floated elements inside block elements laid out correctly */
+header,
+div.main,
+aside {
+	overflow: auto;
+}
+.main-nav {
+	width: 100%;
+	clear: both;
+}
+div.main, footer {
+	clear: both;
+}
+
+/* styles for alignment - not used by main layout blocks but may be used within content on occasion */
+.floatleft {
+	float: left;
+	margin-right: 3%; /* approx 10px */
+}
+.floatright {
+	float: right;
+	margin-left: 3%; /* approx 10px */
+}
+.center {
+	float: none;
+	margin: 0 auto;
+}
+
+/* class for clearing elements */
+.clear {
+	clear: both;
+}
+
+
+
+/*
+2. Global elements including fonts
+----------------------------------------------------------------------------------
+*/
+
+/* Text element layout */
+
+p {
+	margin-bottom: 1em;
+}
+ul, ol, ul ul, ol ol, ul ul ul, ol ol ol {
+	list-style-position: outside;
+	padding-left: 1.4em;
+	margin: 0 0 1.4em 0;
+}
+ol,ol ol, ol ol ol {
+	padding-left: 1.7em;
+}
+
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+dl {
+	margin: 0 0 2em 0;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-bottom: 1.4em;
+}
+code {
+	font-size: 0.8em;
+}
+abbr,
+acronym {
+	cursor: help;
+}
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	position: absolute;
+	left: -9000px;
+}
+
+/* Main global 'theme', fonts and typographic styles */
+
+body {
+	font-size: 18px;
+	line-height: 1.4em;
+	font-family: 'Assistant', sans-serif;
+}
+code {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+blockquote {
+	font-style: italic;
+	padding: 0 3em;
+}
+input[type="text"],
+textarea {
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	padding: 2px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+	font-family: 'Oswald', sans-serif;
+	margin: 1em 0;
+	line-height: 1.4em;
+}
+h1, #site-title {
+	font-size: 2.5em;
+	text-transform: none;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4,
+.grid h3 {
+	font-size: 1.2em;
+}
+h5{
+	font-size: 1em;
+	font-style: italic;
+}
+h6 {
+	font-size: 1em;
+	font-style: normal;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+#content img.left.wp-post-image {
+	margin-right: 10px;
+}
+
+/*
+3. Colours
+----------------------------------------------------------------------------------
+*/
+
+/* Colour scheme
+	#382618 - dark brown, headings, links
+	#4f4c4a - dark grey, borders
+	#505155 - footer background
+	#b6b4b4 - mid grey, links on hover
+	#161615 - v dark grey, text
+*/	
+
+
+/* Global colours */
+body {
+	background: #fff;
+	color: #161615;
+}
+abbr,
+acronym {
+	border-bottom: 1px dotted #333;
+}
+input[type="text"],
+textarea {
+	background: #eee;
+	border: 1px solid #369;
+}
+
+/* Links (except menu) */
+
+a:link,
+a:visited {
+	color: #382618;
+	text-decoration; underline;
+}
+a:active,
+a:hover {
+	color: #b6b4b4;
+}
+.page-title a:link,
+.page-title a:visited,
+.entry-title a:link,
+.entry-title a:visited {
+	text-decoration: none;
+}
+.page-title a:active,
+.page-title a:hover,
+.entry-title a:active,
+.entry-title a:hover {
+	text-decoration: underline;
+}
+
+/* Header colours */
+#site-title a,
+#site-description {
+	color: #382618;
+	text-decoration: none;
+}
+#site-title a:hover,
+#site-title a:active {
+	color: #b6b4b4;
+}
+
+/* Menu colours */
+.menu.main {
+	border-top: 1px solid #382618;
+	border-bottom: 1px solid #382618;
+}
+.menu.main ul {
+	margin-bottom: 0;
+}
+.menu.main a {
+	display: block;
+	line-height: 3em;
+	padding: 0 20px 0 0;
+	text-decoration: none;
+}
+.menu.main a {
+	color: #382618;
+}
+.menu.main ul ul a,
+.menu.main li:hover > a,
+.menu.main ul ul :hover > a {
+	color: #b6b4b4;
+}
+.menu.main li:hover > a,
+.menu.main ul ul :hover > a,
+.menu.main ul li.current_page_item > a,
+.menu.main ul li.current-menu-ancestor > a,
+.menu.main ul li.current-menu-item > a,
+.menu.main ul li.current-menu-parent > a,
+* html.menu .main ul li.current_page_item a,
+* html.menu .main ul li.current-menu-ancestor a,
+* html.menu .main ul li.current-menu-item a,
+* html.menu .main ul li.current-menu-parent a,
+* html.menu .main ul li a:hover {
+	color: #b6b4b4;
+}
+
+/* front page grid */
+.grid {
+	border-top: 1px solid #4f4c4a;
+	border-bottom: 1px solid #8D7F68;
+	overflow: auto;
+}
+
+	
+
+/* Content colours */
+.wide-box,
+.page-template-page-full-width .half.right {
+	background: #4f4c4a;
+	color: #fff;
+}
+.page-template-page-full-width .half.right h3 {
+	color: #fff;
+}
+.wide-box a:link,
+.wide-box a:visited {
+	color: #fff;
+	text-decoration: underline;
+}
+.wide-box a:hover,
+.wide-box a:active {
+	color: #fff;
+	text-decoration: none;
+}
+.blog #content article,
+.archive #content article {
+	border-top: 1px solid #dad8d8;
+	overflow: auto;
+	margin-bottom: 1em;
+}
+
+/* button class */
+.button {
+	padding: 1em;
+	margin: 1em 0;
+	text-align: center;
+	background-color: #382618;
+	color: #fff;
+}
+.button a {
+	color: #fff;
+	text-decoration: underline;
+}
+.button a:hover,
+.button a:active {
+	color: aqua;
+	text-decoration: none;
+}
+
+/* Titles and headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #382618;
+}
+.wide-box h3 {
+	color: #fff;
+}
+
+
+/* Borders */
+
+#content table,
+#content tr td,
+.entry-content fieldset {
+	border: 1px solid #333;
+}
+.category-gallery .size-thumbnail img {
+	border: 10px solid #eee;
+}
+#comments .pingback,
+.commentlist li.comment {
+	border-bottom: 1px solid #333;
+}
+
+
+/* Table content */
+
+#content tr th,
+#content thead th {
+	color: #382618;
+}
+#content tr.odd td {
+	background: #eee;
+}
+
+
+/* Entries */
+
+.entry-content fieldset legend {
+	background: #fff;
+	color: #000;
+}
+
+/* Widgets */
+
+.widget-area,
+.widget-area h3,
+.widget-area h3 {
+	color: #fff;
+}
+.widget-area a:link,
+.widget-area a:visited {
+	color: #c6bfb3;
+	text-decoration: underline;
+}
+.widget-area a:active,
+.widget-area a:hover {
+	color: #c6bfb3;
+	text-decoration: underline;
+}
+.sidebar .widget-area {
+	background-color: #382618;
+	padding: 0.5em 1em;
+	margin-top: 1em;
+	color: #fff;
+}
+
+
+
+/* Footer */
+
+footer {
+	background: #505155;
+	color: #fff;
+}
+footer a:link,
+footer a:visited {
+	color: #fff;
+	text-decoration: underline;
+}
+footer a:hover,
+footer a:active {
+	color: #000;
+	text-decoration: underline;
+}
+
+
+/* 4. Header and content elements
+-------------------------------------------------------------- */
+
+/* Content table styles */
+#content table {
+	margin: 0 -1px 24px 0;
+	text-align: left;
+	width: 100%;
+}
+#content tr th,
+#content thead th {
+	font-size: 0.8em;
+	font-weight: bold;
+	line-height: 1.4em;
+	padding: 9px 24px;
+}
+#content tr td {
+	padding: 6px 24px;
+}
+
+
+/* Asides */
+
+.home #content .category-asides p,
+.home #content article aside p {
+	font-size: 1em;
+	line-height: 1.6em;
+	margin-top: 0;
+}
+.home .hentry.category-asides {
+	padding: 0;
+}
+.home #content .category-asides .entry-content,
+.home #content article aside .entry-content{
+	padding-top: 0;
+}
+
+/* Attachment pages */
+
+.attachment .entry-content .entry-caption {
+	font-size: 1.4em;
+}
+.attachment .entry-content .nav-previous a:before {
+	content: '\2190\00a0';
+}
+.attachment .entry-content .nav-next a:after {
+	content: '\00a0\2192';
+}
+
+/* Images */
+
+img {
+	max-width: 100%;	
+}
+
+#content img {
+	margin: 0;
+	height: auto;
+	width: auto;
+}
+#content .alignleft,
+#content img.alignleft {
+	display: inline;
+	float: left;
+	margin: 4px 4% 4px 0;
+}
+#content .alignright,
+#content img.alignright {
+	display: inline;
+	float: right;
+	margin: 4px 0 4px 4%;
+}
+#content .aligncenter,
+#content img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#content img.alignleft,
+#content img.alignright,
+#content img.aligncenter {
+	margin-bottom: 12px;
+}
+
+/* Captions */
+
+#content .wp-caption {
+	line-height: 1.4em;
+	padding: 4px;
+	text-align: center;
+}
+#content .wp-caption img {
+	margin: 5px 5px 0;
+}
+#content .wp-caption p.wp-caption-text {
+	font-size: 0.8em;
+	margin: 5px;
+}
+
+
+/* Gallery */
+
+#content .gallery {
+	margin: 0 auto;
+}
+#content .gallery .gallery-item {
+	float: left;
+	margin-top: 0;
+	text-align: center;
+	width: 33%;
+}
+#content .gallery .gallery-item img {
+	padding: 5px;
+	border: 1px solid #bbb;
+}
+#content .gallery .gallery-caption {
+	font-size: 0.8em;
+	margin: 0 0 12px;
+}
+#content .gallery dl {
+	margin: 0;
+}
+#content .gallery br+br {
+	display: none;
+}
+#content .attachment img { /* centers single attachment images */
+	display: block;
+	margin: 0 auto;
+}
+
+/* 5. In-content navigation
+-------------------------------------------------------------- */
+
+.navigation {
+	font-size: 0.8em;
+	line-height: 1.5em;
+	overflow: hidden;
+}
+.nav-previous {
+	float: left;
+	width: 50%;
+}
+.nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+.nav-below {
+	margin: 20px 0;
+}
+
+
+
+
+/* 6. Widget Areas
+-------------------------------------------------------------- */
+
+.widget-area .widget-container {
+	margin-left: 0;
+}
+.widget_search #s {/* This keeps the search inputs in line */
+	width: 70%;
+}
+.widget_search label {
+	display: none;
+}
+.widget-area a:link,
+.widget-area a:visited {
+	text-decoration: none;
+}
+.widget-area a:active,
+.widget-area a:hover {
+	text-decoration: underline;
+}
+.widget-area .entry-meta {
+	font-size: 0.7em;
+}
+#wp_tag_cloud div {
+	line-height: 1.6em;
+}
+
+
+
+
+
+
+/* 7. Mobile
+-------------------------------------------------------------- */
+
+/* layout */
+
+/* media queries for larger screens such as small tablets in landscape or large tablets in portrait */
+@media screen and ( max-width: 780px ) {
+	/* only the .quarter layout class is relevant here - all other classes will have full width */
+	.quarter {
+		width: 48%;
+	}
+	.quarter.left {
+		margin-right: 2%;
+	}
+	.quarter.right {
+		margin-left: 2%;
+	}
+	footer .third.quarter.widget-area {
+		clear: both;
+	}
+}
+
+/* media queries for small screens in landscape mode (or similar) */
+@media screen and ( max-width: 600px ) {
+	/* overall margins and padding - mainly vertical. These create some space around the elements of the layout */
+	body, footer {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+	}
+	header, .main, .colophon, nav.main, .fatfooter {
+		margin: 0 10px;
+	}
+	/* width sizing all full width in small screens */
+	.quarter,
+	.one-third,
+	.half,
+	.two-thirds,
+	.three-quarters,
+	.full-width {
+		width: 100%;
+		margin: 0;
+	}
+	/* padding adjustments */
+	header, footer {
+		padding: 10px 0;
+	}
+	.widget-area {
+		padding: 0 0 10px 0;
+	}
+}
+
+/* burger menu */
+
+/*----- Toggle Button -----*/
+.toggle-nav {
+    display: none !important;
+}
+ 
+/*----- Menu -----*/
+@media screen and ( max-width: 480px) {
+	
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	
+	/* fix sidebar widget width in full width screen */
+	.sidebar-full .sidebar-widget-area .widget-container {
+		width: 100%;
+		float: none;
+		margin-right: 0px;
+	}
+	
+	/* header */
+	header {
+		position: relative;
+		padding-bottom: 0px;
+	}
+	header .site-name.three-quarters.left {
+		width: 75%;
+		padding-bottom: 0px;
+	}
+	header h2#site-description {
+		display: block;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+	header .right.quarter {
+		width: 22%;
+		margin-left: 2%;
+	}
+	header .in-header.widget-area {
+		display: none;
+	}	
+
+   
+	.toggle-nav {
+	    display: inline-block !important;
+	    float: right;
+	    margin: 25px;
+	    font-size: 2em;
+	    transition: color linear 0.15s;
+	}
+		
+	a.toggle-nav:link, 
+	a.toggle-nav:visited,
+	a.toggle-nav:hover, 
+	a.toggle-nav:active {
+	    text-decoration: none;
+	    color: #8D7F68;
+	} 
+   
+	.menu.main {
+	    display: inline-block;
+	    position: relative;
+	    background: #fff;
+	    text-align: left;
+	}
+	
+	.menu.main ul {
+	    display: none;
+		position: absolute;
+		overflow: auto;
+		top: 0px;
+	    right: 0px;
+		z-index: 999;
+	    padding-right: 15px;
+	    background: #fff;
+	}
+	
+	.menu.main ul li {
+	    float: none;
+	    display: block;
+	    position: relative;
+	    top: 0px;
+	    right: 0px;
+	    min-width: 200px;
+		background: #fff;
+		text-align: right;
+	}
+	
+	.main.menu li:after { 
+		content: none; 
+	}
+	 
+ }
+ 
+ /* smaller screens */
+ @media screen and ( max-width: 380px) {
+	 
+	 #site-title {
+		 font-size: 1.7em;
+	 }
+	 h2#site-description  {
+		 font-size: 1.2em;
+	 }
+	 
+ }
+ 
+    
+
+

@@ -1,0 +1,25 @@
+/***************************************************
+	Widget plugin - styling for cta box
+***************************************************/
+
+.tutsplus_cta_widget .cta {
+	clear: both;
+	width: 96%;
+	margin: 10px 0;
+	padding: 10px 2%;
+	font: arial, sans-serif;
+	font-size: 1.4rem;
+	text-align: center;
+	line-height: 1.8rem;
+	background-color: #fff;
+}
+.tutsplus_cta_widget .cta a:link,
+.tutsplus_cta_widget .cta a:visited {
+	text-decoration: none;
+	color: #f78a04;
+}
+.tutsplus_cta_widget .cta a:hover,
+.cta a:active {
+	text-decoration: underline;
+	color: #512e03;
+}

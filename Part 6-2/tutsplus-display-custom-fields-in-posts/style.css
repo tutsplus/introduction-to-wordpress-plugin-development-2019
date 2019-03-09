@@ -1,0 +1,12 @@
+/*
+Theme Name:     Displaying Custom Fields in Your Post Templates
+Theme URI:      http://rachelmccollin.co.uk/display-custom-fields-in-posts
+Description:    Theme to acocmpany tutsplus coffee break course on outputting custom field values in theme templates. Child theme for the Twenty Sixteen theme.
+Author:         Rachel McCollin
+Author URI:     http://rachelmccollin.co.uk/
+Template:       twentysixteen
+Version:        1.0
+*/
+
+@import url("../twentysixteen/style.css");
+

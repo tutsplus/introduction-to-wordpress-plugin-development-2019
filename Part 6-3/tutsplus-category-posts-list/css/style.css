@@ -1,0 +1,10 @@
+/***********************************************
+	Styling for category posts list
+***********************************************/
+
+.category-posts article {
+	width: 31%;
+	margin-right: 2%;
+	float: left;
+	clear: none;
+}

@@ -1,0 +1,6 @@
+/* styling for latest posts list */
+.latest-posts {
+	margin: 10px 0;
+	padding: 1em;
+	border: 2pt solid #000;
+}
